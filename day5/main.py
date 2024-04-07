@@ -28,11 +28,7 @@ print(f"Not randomised character order: {password}")
 
 password_list = list(password)
 
-for index in range(0, len(password) - 1):
-    swap_index_one = random.randint(0, len(password) - 1)
-    swap_index_two = random.randint(0, len(password) - 1)
-    old = password[swap_index_one]
-    password_list[swap_index_one], password_list[swap_index_two] = password_list[swap_index_two], password_list[swap_index_one]
+random.shuffle(password_list)
 
 password = ''.join(password_list)
 print(f"Randomised character order: {password}")
